@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<style>
+    .wrap a:first-child:link {
+        background: yellow;
+    }
+
+    .wrap a:nth-child(2):visited {
+        text-decoration: line-through;
+    }
+
+    .wrap a:nth-child(3):active {
+        font-size: 20px;
+    }
+
+    .wrap a:last-child:hover {
+        color: red;
+    }
+
+    .wrap :lang(c) {
+        border: 1px solid black;
+    }
+
+    .myform :enabled {
+        background: blue;
+    }
+
+    .myform :focus {
+        background: yellow;
+    }
+
+    .myform :disabled {
+        display: block;
+    }
+
+    .myform :checked {
+        display: block;
+    }
+
+    .myform :selection {
+        display: block;
+    }
+    .wrap :empty{
+      text-align: center;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <div class="wrap">
+            <a href="#">导航1</a>
+            <a href="#">导航2</a>
+            <a href="#">导航3</a>
+            <a href="#">导航4</a>
+        </div>
+    </div>
+    <div id="cotent">
+        <div class="wrap">
+            <div lang="c">侧边栏
+            </div>
+            中心区块
+            <form class="myform" action="index.html" method="post">
+                <p>
+                    用户名：
+                    <input type="text" name="username" placeholder="用户名" />
+                </p>
+                <p>
+                    <input type="radio" name="sex" value="male" checked/>男
+                    <input type="radio" name="sex" value="female" />女
+                    <input type="radio" name="sex" value="male/female" disabled/>刘梓晨
+                </p>
+
+            </form>
+        </div>
+        <div id="footer">
+            <div class="wrap">
+                我是底部
+            </div>
+        </div>
+</body>
+
+</html>
