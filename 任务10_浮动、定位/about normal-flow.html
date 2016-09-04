@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about normal-flow</title>
+    <style>
+        .container {
+                    position: relative;
+            border: 1px solid black;
+            width: 500px;
+            height: 300px;
+        }
+.box{
+  width: 200px;
+  height: 100px;
+}
+        .box:nth-child(1) {
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            background: red;
+        }
+        .box:nth-child(2) {
+            position: fixed;
+            left: 30px;
+            bottom: 600px;
+            background: blue;
+        }
+
+        .box:nth-child(3) {
+            float: right;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">这是绝对定位，脱离了文档流</div>
+        <div class="box">这是固定定位，脱离了文档流</div>
+        <div class="box">这是浮动，同样脱离了文档流</div>
+        <div class="box">我是普通文档流，前面三个box全都脱离了文档流，所以我在文档流中排名第一</div>
+    </div>
+</body>
+
+</html>

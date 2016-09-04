@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about z-index</title>
+    <style>
+        .parent1 {
+            width: 500px;
+            height: 300px;
+            background: #ccc;
+            border: 1px solid black;
+        }
+
+        .child1 {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            left: 480px;
+            background: #ddd;
+            z-index: -5;
+        }
+
+        .parent2 {
+            position: relative;
+            width: 50px;
+            height: 300px;
+            left: 450px;
+            top: -200px;
+            background: #00f;
+            border: 1px solid black;
+            z-index: 10;
+        }
+
+        .child2 {
+            position: relative;
+            left: -30px;
+            width: 50px;
+            height: 150px;
+            background: #00a;
+        }
+
+        .parent3 {
+            position: relative;
+            left: 50px;
+            top: -500px;
+            width: 500px;
+            height: 200px;
+            background: #0f0;
+            border: 1px solid black;
+        }
+
+        .child3 {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            left: 80px;
+            top: 50px;
+            background: #0c0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent1">我是没有定位的父元素1
+        <div class="child1">我是定位了的子元素1，z-index为-5</div>
+    </div>
+    <div class="parent2">我是定位了的父元素2,z-index为15
+        <div class="child2">我是定位了的子元素2，z-index为10</div>
+    </div>
+    <div class="parent3">我是定位了的父元素3，z-index为10
+        <div class="child3">我是定位了的子元素3，z-index为30</div>
+    </div>
+</body>
+
+</html>

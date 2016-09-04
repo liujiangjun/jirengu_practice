@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clearing floating</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 500px;
+            border: 5px solid black;
+            padding: 30px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+        }
+
+        .first {
+            float: left;
+            background: #f00;
+        }
+
+        .second {
+            float: left;
+            width: 250px;
+            height: 250px;
+            background: #0f0;
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box first">first</div>
+        <div class="box second">second</div>
+
+    </div>
+</body>
+
+</html>

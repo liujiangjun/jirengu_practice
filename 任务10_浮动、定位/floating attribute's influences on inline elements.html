@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>floating attribute's influences on inline elements</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 300px;
+            padding: 30px;
+            border: 5px solid black;
+        }
+
+        .box:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            float: left;
+            background: #0f0;
+        }
+
+        .box:nth-child(2) {
+            width: 250px;
+            height: 250px;
+            float: right;
+            background: #aca;
+        }
+
+        .box:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            float: right;
+            background: #00f;
+        }
+
+        .box:nth-child(4) {
+            width: 800px;
+            height: 150px;
+            border: 3px dashed red;
+        }
+
+        span {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">我是左浮动元素</div>
+        <div class="box">我也是右浮动元素</div>
+        <div class="box">我是右浮动元素</div>
+        <div class="box">我是普通快级元素，里面有很多文字。我是普通快级元素，里面有很多文字。我是普通快级元素，里面有很多文字。我是普通快级元素，里面有很多文字。我是普通快级元素，里面有很多文字。我是普通快级元素，里面有很多文字。我是普通快级元素，里面有很多文字。</div>
+        <span>我是可爱的行内元素。我是可爱的行内元素。我是可爱的行内元素。我是可爱的行内元素。我是可爱的行内元素。我是可爱的行内元素。我是可爱的行内元素。</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>floating attribute's influences on normal elements</title>
+    <style>
+        .container {
+            width: 250px;
+            height: 450px;
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            background: red;
+        }
+
+        .box:nth-child(2) {
+            float: left;
+            background: #ccc;
+        }
+
+        .box:nth-last-child(2) {
+            float: right;
+            background: blue;
+        }
+
+        .box:nth-last-child(1) {
+            width: 120px;
+            height: 120px;
+            background: #0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+</body>
+
+</html>
